@@ -1,0 +1,607 @@
+    /* === STYLE UTAMA KRISNA PUTRA MEDIA === */    
+    
+    /* Reset dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+        background-color: #e4ecfa;
+        color: #1A1A1A;
+        line-height: 1.6;
+    }
+    
+    /* === NAVBAR === */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10%;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    
+    .navbar .logo {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #2D6FF7;
+    }
+    
+    .navbar ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+    
+    .navbar a {
+        text-decoration: none;
+        color: #1A1A1A;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+    
+    .navbar a:hover {
+        color: #2D6FF7;
+    }
+    
+    /* === HAMBURGER MENU === */
+    .menu-toggle {
+        display: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #2D6FF7;
+    }
+    
+    /* Responsive Menu */
+    @media (max-width: 768px) {
+        .menu-toggle {
+        display: block;
+        }
+    
+        nav ul {
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        right: 10%;
+        width: 80%;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: none;
+        }
+    
+        nav ul.show {
+        display: flex;
+        }
+    
+        nav ul li {
+        margin: 10px 0;
+        }
+    }
+    
+
+    /* === HERO SECTION === */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 10%;
+        flex-wrap: wrap;
+    }
+    
+    #home {
+        padding-top: 80px;
+        margin-top: 0;
+        scroll-margin-top: 80px;
+    }
+    
+
+    .hero-text {
+        flex: 1;
+        min-width: 300px;
+        margin-right: 40px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+        color: #444;
+        margin-bottom: 20px;
+    }
+    
+    .btn-primary {
+        background-color: #2D6FF7;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+    
+    .btn-primary:hover {
+        background-color: #1C4ECB;
+    }
+    
+    .hero-video {
+        flex: 1;
+        min-width: 300px;
+        height: 220px;
+        background-color: #E8F0FF;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: #2D6FF7;
+    }
+
+    /* === HERO SECTION === */
+    .hero {
+        background-color: #E8F0FF;
+        padding: 80px 10%;
+    }
+    
+    .hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    
+    .hero-text {
+        flex: 1 1 400px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+        color: #111;
+        margin-bottom: 10px;
+    }
+    
+    .hero-text p {
+        color: #555;
+        margin-bottom: 20px;
+    }
+    
+    .hero-video {
+        flex: 1 1 400px;
+    }
+    
+    .hero-video iframe {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+  
+    
+    /* === SECTION UMUM === */
+    section {
+        padding: 60px 10%;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #1A1A1A;
+    }
+    
+    /* === KARTU ARTIKEL === */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        padding: 20px;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    /* --- Styling Gambar pada Card Berita --- */
+    .berita .card img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .berita .card h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 12px 10px 8px;
+        color: #1e293b;
+        line-height: 1.4;
+    }
+
+    .berita .card p {
+        flex-grow: 1;
+        font-size: 15px;
+        color: #475569;
+        margin: 0 16px 16px;
+        line-height: 1.6;
+        min-height: 75px; /* Biar tingginya seragam */
+    }
+    
+    /* --- Biar card-nya rapi --- */
+    .berita .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: 24px;
+        margin-top: 20px;
+    }      
+    
+    /* --- Kartu individual --- */
+    .berita .card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        padding-bottom: 20px;
+        transition: transform 0.5s ease;
+    }
+    
+    .berita .card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .berita .btn-secondary {
+        align-self: center;
+        display: inline-block;
+        margin-top: auto;
+        background-color: #2563eb;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .berita .btn-secondary:hover {
+        background-color: #1e40af;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* === SECTION TENTANG === */
+    .tentang {
+        background-color: #E8F0FF;
+        border-radius: 16px;
+        text-align: center;
+    }
+    
+    .tentang p {
+        margin: 20px auto;
+        max-width: 600px;
+        color: #333;
+    }
+    
+    .btn-secondary {
+        display: inline-block;
+        background-color: white;
+        color: #2D6FF7;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+        border: 2px solid #2D6FF7;
+    }
+    
+    .btn-secondary:hover {
+        background-color: #2D6FF7;
+        color: white;
+    }
+    
+    /* VIDEO TERBARU  */
+        .video-section {
+            padding: 60px 10%;
+            background-color: #E8F0FF;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+        }
+        
+        .video-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .video-card iframe {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* === HALAMAN DETAIL ARTIKEL === */
+    .detail-artikel {
+        max-width: 800px;
+        margin: 60px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    
+    .detail-artikel h1 {
+        font-size: 1.8rem;
+        color: #1A1A1A;
+        margin-bottom: 10px;
+    }
+    
+    .detail-artikel .tanggal {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 20px;
+    }
+    
+    .gambar-artikel {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .detail-artikel p {
+        margin-bottom: 16px;
+        color: #333;
+    }
+    
+    .video-container {
+        margin: 20px 0;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+
+    /* === HALAMAN REVIEW === */
+    .hero-review {
+        text-align: center;
+        background-color: #E8F0FF;
+        padding: 80px 10%;
+        border-radius: 0 0 32px 32px;
+    }
+    
+    .hero-review h1 {
+        font-size: 2rem;
+        color: #1A1A1A;
+        margin-bottom: 10px;
+    }
+    
+    .hero-review p {
+        color: #444;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .review-list {
+        padding: 60px 10%;
+    }
+    
+    .review-list .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+  
+    /* === REVIEW SECTION (HOME) === */
+    .review-section {
+        padding: 60px 10%;
+        background-color: #F8FAFF;
+    }
+    
+    .review-section h2 {
+        font-size: 1.8rem;
+        color: #111;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .review-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+    }
+    
+    .review-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* dorong konten bawah */
+        align-items: center;
+        text-align: center;
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        padding: 20px;
+        min-height: 480px; /* samain tinggi semua card */
+    }
+    
+    .review-card .btn-secondary {
+        margin-top: auto; /* otomatis dorong tombol ke bawah */
+        align-self: center; /* tengah horizontal */
+        background-color: transparent;
+        border: 2px solid #2563eb;
+        color: #2563eb;
+        padding: 10px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      }
+
+      .review-card .btn-secondary:hover {
+        background-color: #2563eb;   /* warna biru isi tombol */
+        color: #fff;                 /* teks jadi putih */
+        transform: scale(1.05);      /* sedikit membesar */
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      }
+      
+      
+    
+    .review-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .review-card img {
+        width: 100%;
+        height: 200px; /* semua gambar jadi tinggi sama */
+        object-fit: cover; /* biar proporsional */
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .review-card h3 {
+        color: #1A1A1A;
+        margin-bottom: 10px;
+    }
+    
+    .review-card p {
+        font-size: 15px;
+        color: #475569;
+        margin: 0 16px 20px;
+        line-height: 1.6;
+        min-height: 80px; /* biar tinggi teksnya rata antar kartu */
+    }
+      
+    
+    .center-btn {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    /* === ABOUT SECTION === */
+    .about-section {
+        background-color: #E9F1FF;
+        text-align: center;
+        padding: 80px 10%;
+        color: #1E293B;
+    }
+    
+    .about-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .about-section p {
+        font-size: 16px;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        line-height: 1.7;
+    }
+    
+    /* === CONTACT SECTION === */
+    .contact-section {
+        background-color: #F8FAFF;
+        text-align: center;
+        padding: 80px 10%;
+    }
+    
+    .contact-section h2 {
+        font-size: 1.8rem;
+        color: #111;
+        margin-bottom: 10px;
+    }
+    
+    .contact-section p {
+        font-size: 16px;
+        color: #475569;
+        margin-bottom: 30px;
+    }
+    
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px 14px;
+        border: 1px solid #CBD5E1;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+    
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        border-color: #2563EB;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
+    
+    .contact-form button {
+        margin-top: 10px;
+    }
+  
+
+    /* === FOOTER === */
+    footer {
+        background-color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: #666;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* === RESPONSIVE MOBILE === */
+    @media (max-width: 768px) {
+        .navbar ul {
+        display: none;
+        }
+    
+        .hero {
+        flex-direction: column;
+        text-align: center;
+        }
+    
+        .hero-text {
+        margin: 0;
+        }
+    
+        .hero-video {
+        margin-top: 20px;
+        }
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+      
+    
